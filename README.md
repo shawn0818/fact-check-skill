@@ -67,7 +67,8 @@ git clone https://github.com/shawn0818/fact-check-skill.git <项目目录>/.work
 │   └── standards.md                  # IFCN / EFCSN 准则勾选清单、法新社风格手册要点
 ├── assets/
 │   └── report-template.md            # 6 段核查报告模板 + 写作检查表
-├── LICENSE                           # CC BY-NC-SA 4.0
+├── LICENSE                           # CC BY-NC-SA 4.0 官方许可全文
+├── NOTICE.md                         # 署名要求与许可要点说明
 └── README.md
 ```
 
@@ -84,7 +85,11 @@ git clone https://github.com/shawn0818/fact-check-skill.git <项目目录>/.work
 - 原著：《事实核查手册》，中国事实核查平台「有据」（[chinafactcheck.com](https://chinafactcheck.com)）编制。手册为非商业性公共产品，大部分内容截至 2023 年 4 月。
 - 原著许可：**知识共享 署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0）**，原文见 <https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>。
 - 本技能作为原著的演绎作品，依 **CC BY-NC-SA 4.0** 发布：**不得用于商业目的**；转载、复制、节选、混编、二次创作须给出适当署名；基于本技能进行的创作也须采用同样的 CC BY-NC-SA 4.0 协议授权。
+- 协议官方全文见 `LICENSE`，署名要求与许可要点说明见 `NOTICE.md`。
 - 原著 PDF 未收录在本仓库中。引用案例的核查信息均取自该核查发布之时。
+
+> 注：GitHub 的许可证自动识别不收录 CC 的「非商业性使用」类协议，因此仓库页会显示 **Other / NOASSERTION**。
+> 这**不代表未声明许可**——`LICENSE` 内是 CC BY-NC-SA 4.0 的官方全文，本项目确实以该协议授权。
 
 ## 免责声明
 
