@@ -32,7 +32,7 @@ An executable Agent Skill for fact-checking: claim triage → source tracing →
 用户级（对所有项目生效）：
 
 ```bash
-git clone <本仓库地址> ~/.workbuddy/skills/fact-check
+git clone https://github.com/shawn0818/fact-check-skill.git ~/.workbuddy/skills/fact-check
 ```
 
 Windows：`%USERPROFILE%\.workbuddy\skills\fact-check`
@@ -40,7 +40,7 @@ Windows：`%USERPROFILE%\.workbuddy\skills\fact-check`
 项目级（仅当前项目）：
 
 ```bash
-git clone <本仓库地址> <项目目录>/.workbuddy/skills/fact-check
+git clone https://github.com/shawn0818/fact-check-skill.git <项目目录>/.workbuddy/skills/fact-check
 ```
 
 克隆后目录里必须直接有 `SKILL.md`，即本仓库根目录就是技能根目录。
