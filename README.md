@@ -36,6 +36,7 @@ An executable Agent Skill for fact-checking: claim triage → source tracing →
 - **判定标签对照**：有据 7 档 / PolitiFact / 华盛顿邮报 / Snopes / 台湾事实查核中心 / Meta / Health Feedback
 - **职业准则**：IFCN 与 EFCSN 准则勾选清单、法新社风格手册要点
 - **中文平台与国内信源**：「据网易 / 百家号」≠ 该媒体、IP 属地的用法与局限、删文与编辑痕迹、警情通报与红头文件读法、AI 内容标识办法（2025-09-01 施行），以及法规 / 政策 / 统计 / 企业 / 司法 / 药品等官方一手库
+- **译文漂移**：话说过但转述走样——陈述变命令（will→必须）、said 变「怒斥」、反讽变「回怼」、截半句、旧话配新闻；12 项对照清单 + 三栏对照写法
 - **数字与统计**：20 项口径检查清单（百分比/百分点、相对/绝对风险、基数、名义/实际、billion≠亿、纵轴截断……）+ 复算 + 判定规则
 - **2023 年后的时效修订**：CrowdTangle 关停、TweetDeck 改为付费 X Pro、Google Lens、Meta 美国终止第三方核查、C2PA / SynthID 验证、2025 年后带声音的 AI 视频
 
@@ -75,6 +76,7 @@ git clone https://github.com/shawn0818/fact-check-skill.git <项目目录>/.work
 │   ├── agent-playbook.md             # Agent 执行手册：能力自检、存档 API、截帧命令、反搜交接、三种输出模式
 │   ├── china-platforms.md            # 中文平台取证要点 + 国内一手数据库
 │   ├── numbers-and-stats.md          # 数字与统计类说法流程卡
+│   ├── translation-drift.md          # 译文语气与程度漂移流程卡
 │   ├── tools.md                      # 搜索运算符速查 + 工具网址总表（反搜、地图、存档、航班船舶、数据库、AI 检测）
 │   ├── sources.md                    # 信源分级、各类信源陷阱、NewsGuard / The Factual / AllSides 评级工具
 │   ├── typology-and-tactics.md       # 8 类虚假信息定义与案例、AI 图破绽、Deepfake 8 项检查、地理定位推理链
@@ -102,6 +104,8 @@ git clone https://github.com/shawn0818/fact-check-skill.git <项目目录>/.work
 - 含先后顺序的说法**先拉时间线**，识别「把早已存在的状态包装成某次表态之后的新反转」；
 - **付费墙信源取证**（`references/paywalled-sources.md`）；
 - 判定标签从上到下逐点数齐：报告模板新增**判定标签栏**与**时间线**两节。
+
+2026-10 实测（詹姆斯「人们必须尊重他」）：原话是 2023 ESPY 发言 "you will always respect me"，话说过但「必须」把陈述改成了命令。据此新增 `references/translation-drift.md`，并规定引语型说法无出处时先问场合。
 
 2026-10 修订：补 Agent 执行层、中文平台与国内一手信源、数字统计流程卡；时效内容（工具关停、平台政策、AI 生成与检测）经联网核实后更新，并在原文处标注「时效更新」。
 
