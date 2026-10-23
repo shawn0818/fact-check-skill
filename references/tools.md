@@ -1,6 +1,6 @@
 # 工具与网址总表
 
-来源：《事实核查手册》第6章「信息检索」、第4章「信源」、第7–10章。工具能力截至手册成稿（2023 年 4 月），具体界面与支持范围可能已变化。
+来源：《事实核查手册》第6章「信息检索」、第4章「信源」、第7–10章。工具能力截至手册成稿（2023 年 4 月）；2023 年后的关停、改名与新工具已在 2026-10 修订中标注（见各节「时效更新」与第 11 节）。Agent 无浏览器时的调用方式见 `agent-playbook.md`，中文平台与国内数据库见 `china-platforms.md`。
 
 ## 1. 搜索引擎运算符速查（Google，Bing/Yandex 部分兼容）
 
@@ -43,7 +43,7 @@
 
 | 工具 | 网址 | 优势 | 局限 |
 |---|---|---|---|
-| Google Images | https://images.google.com | 人物识别、共享图源头、艺术品名称；主题识别强 | 试图识别「主题」而非图像本身，主题不清时结果差 |
+| Google Lens（原 Google 以图搜图） | https://images.google.com （上传后进入 Lens）；按网址搜：`https://lens.google.com/uploadbyurl?url=<图片网址>` | 人物识别、共享图源头、艺术品名称；主题识别强；「关于此图片」可看该图最早被 Google 索引的时间与使用场景 | 试图识别「主题」而非图像本身，主题不清时结果差 |
 | Yandex | https://yandex.com/images/ | 俄/东欧/中亚最强；显示不同尺寸、可识别文字、可裁剪；常返回更大更清晰版本 | — |
 | Bing Visual Search | https://www.bing.com/visualsearch | 可识别画面中多个元素并查找同时包含这些元素的图；结果可按最新/最久排序 | — |
 | TinEye | https://tineye.com/ | **唯一可按时间排序**（best match / most changed / biggest image / newest / oldest）；按图像指纹比对，不依赖关键词/元数据/水印 | 只找完全匹配（含裁剪调色缩放轻微旋转），找不到「相似」图；抓不到 FB/IG；≤100px 无法建指纹 |
@@ -106,6 +106,7 @@
 | Facebook | 同上；未登录显示 PST | 悬停显示完整时间；若修改过发布时间，时间戳处出现时钟图标，悬停看修改前时间 |
 | Instagram | 只显年月日 | Chrome 右键「检查」，搜 `datetime`，得 UTC 发布时间 |
 | YouTube | 以 PST 为准，只显日期 | InVID 视频分析取 UTC 发布时间，可转本地时间 |
+| 微信 / 微博 / 抖音 / 小红书 / 知乎 / B 站 | 各不相同，多数展示 IP 属地 | 见 `china-platforms.md` 第 2 节 |
 
 ## 6. 航班与船舶追踪
 
@@ -125,8 +126,8 @@
 | 工具 | 网址 | 用途 |
 |---|---|---|
 | Trendolizer | http://get.trendolizer.com/ | Lead Stories 开发，监测跨平台链接/图/视频互动量 |
-| CrowdTangle | https://www.crowdtangle.com/ | 社交平台内容监测 |
-| TweetDeck | https://tweetdeck.twitter.com/ | 推特流监测 |
+| ~~CrowdTangle~~ | — | **已于 2024-08-14 关停**。替代品 Meta Content Library 仅向学术与非营利研究者开放，多数新闻机构用不了 |
+| X Pro（原 TweetDeck） | https://pro.x.com/ | 推特流监测；2023 年起改名并仅限付费订阅用户 |
 | Google Trends | https://trends.google.com/home | 搜索热度 |
 | 知微事见 | https://ef.zhiweidata.com/ | 中文舆情 |
 | 知微舆论场 | https://trends.zhiweidata.com/ | 中文舆情 |
@@ -164,6 +165,24 @@
 
 ## 10. 生成式 AI 工具（识别 AI 图时参考）
 
-Midjourney https://www.midjourney.org/ ；Stable Diffusion https://stablediffusionweb.com/ ；DALL·E 2 https://openai.com/product/dall-e-2 ；Craiyon https://www.craiyon.com ；Bing Image Creator https://www.bing.com/create ；Adobe Firefly；Nvidia 毕加索；Runway Gen-2 https://research.runwayml.com/gen2 （文本生成视频）。
+手册原列（2023）：Midjourney https://www.midjourney.com/ ；Stable Diffusion；DALL·E 2；Craiyon https://www.craiyon.com ；Bing Image Creator https://www.bing.com/create ；Adobe Firefly；Nvidia 毕加索；Runway Gen-2（文本生成视频）。
+
+**时效更新（2026-10）**：主流生成工具已换代，图像有 ChatGPT 内置图像生成、Google Gemini / Imagen、Midjourney 新版本、国内的即梦、通义万相、豆包等；视频有 Google Veo 3（2025-05 起可同步生成声音）、OpenAI Sora 2（2025-09）、快手可灵、Runway 等。工具名单变化很快，核查时不要以「某工具做不到 X」作为判断依据。
 
 **自带水印线索**：DALL·E 右下角多色条、Craiyon 小红铅笔、Bing 左下角 Bing Logo（均可被移除或裁剪）。Google 自 2023-05-10 起在 AI 生成图原始文件加标记。
+
+## 11. 内容来源凭证与 AI 检测（2024–2026 新增）
+
+| 工具 / 机制 | 网址 | 说明 |
+|---|---|---|
+| Content Credentials 验证 | https://contentcredentials.org/verify | 上传文件读取 C2PA 内容凭证（谁生成、用什么工具、编辑历史）。**多数社媒上传会剥离凭证**，读不到不说明任何问题 |
+| Gemini 的 SynthID 验证 | https://support.google.com/gemini/answer/16722517 | 在 Gemini 中上传图片或视频问「这是 AI 生成的吗」，检测 Google 自家模型嵌入的 SynthID 隐形水印，也会读 C2PA。**只能识别 Google 工具生成的内容**，对其他生成器无结论 |
+| 平台 AI 标签 | — | TikTok、抖音、YouTube、Meta 等会根据 C2PA 或水印自动加注 AI 标签，也有作者自主声明。标签是线索，不是结论 |
+| 国内 AI 内容标识 | 《人工智能生成合成内容标识办法》（2025-09-01 施行）+ GB 45438—2025 | 生成服务须加显式标识与元数据隐式标识。详见 `china-platforms.md` 第 2 节 |
+| 社区注释 | X Community Notes；Meta Community Notes（2025 年起在美国取代第三方核查） | 可作为线索与反方观点来源，**不能当作核查结论引用**，需独立核实其所附信源 |
+
+**使用纪律**
+
+- 水印和凭证**可以被去除，也可以被伪造**：已出现给真实视频加 Sora 水印、借此声称「这是 AI 假视频」的做法。
+- 有凭证或水印 → 强线索；没有 → 什么也证明不了。
+- 检测器（Hive 等）普遍不公布误报率，对经过压缩、转录、二次剪辑的内容效果更差。**任何单一检测器结果都不能作为判定依据**，必须与溯源（找到原始发布者、原始场景）结合。
